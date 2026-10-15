@@ -5,7 +5,7 @@ public class Vendedor extends Persona{
     private LocalDate fechaContratacion;
     private double salarioBasico;
 
-    Vendedor (int documentoIdentidad, String nombreCompleto, String correoElectronico, int telefono, String codigoEmpleado, LocalDate fechaContratacion, double salarioBasico){
+    Vendedor (String documentoIdentidad, String nombreCompleto, String correoElectronico, String telefono, String codigoEmpleado, LocalDate fechaContratacion, double salarioBasico){
         super(documentoIdentidad, nombreCompleto, correoElectronico, telefono);
         this.codigoEmpleado = codigoEmpleado;
         this.fechaContratacion = fechaContratacion;

@@ -2,7 +2,7 @@ public class Cliente extends Persona{
     private String codigoAfiliacion;
     private CategoriaCliente categoriaCliente;
 
-    private Cliente (int documentoIdentidad, String nombreCompleto, String correoElectronico, int telefono, String codigoAfiliacion, CategoriaCliente categoriaCliente){
+    private Cliente (String documentoIdentidad, String nombreCompleto, String correoElectronico, String telefono, String codigoAfiliacion, CategoriaCliente categoriaCliente){
         super(documentoIdentidad, nombreCompleto, correoElectronico, telefono);
         this.codigoAfiliacion = codigoAfiliacion;
         this.categoriaCliente = categoriaCliente;

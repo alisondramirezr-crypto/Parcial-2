@@ -1,21 +1,21 @@
 public abstract class Persona {
-    private int documentoIdentidad;
+    private String documentoIdentidad;
     private String nombreCompleto;
     private String correoElectronico;
-    private  int telefono;
+    private String telefono;
 
-    public Persona(int documentoIdentidad, String nombreCompleto, String correoElectronico, int telefono) {
+    public Persona(String documentoIdentidad, String nombreCompleto, String correoElectronico, String telefono) {
         this.documentoIdentidad = documentoIdentidad;
         this.nombreCompleto = nombreCompleto;
         this.correoElectronico = correoElectronico;
         this.telefono = telefono;
     }
 
-    public int getDocumentoIdentidad() {
+    public String getDocumentoIdentidad() {
         return documentoIdentidad;
     }
 
-    public void setDocumentoIdentidad(int documentoIdentidad) {
+    public void setDocumentoIdentidad(String documentoIdentidad) {
         this.documentoIdentidad = documentoIdentidad;
     }
 
@@ -35,11 +35,11 @@ public abstract class Persona {
         this.correoElectronico = correoElectronico;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
