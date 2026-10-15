@@ -26,11 +26,10 @@ public class Cliente extends Persona{
 
     @Override
     public String toString() {
-        return "Vendedor:" +
-                super.toString() +
-                "Codigo empleado= " + codigoEmpleado + '|' +
-                "Fecha contratacion= " + fechaContratacion + '|' +
-                "Salario basico= " + salarioBasico;
+        return "Cliente:" +
+                super.toString()+
+                "Codigo afiliacion=" + codigoAfiliacion + '|' +
+                "Categoria cliente=" + categoriaCliente;
     }
 
 }
