@@ -79,4 +79,21 @@ public class Venta {
                 "Vendedor: " + vendedor + " | "+
                 "Cliente: " + cliente;
     }
+
+    public double calcularValorTotal() {
+        double totalVenta = 0;
+
+        for (DetalleVenta detalle : listaVentaDetalles) {
+            // Obener prenda y el cliente asociados a la venta
+            Prenda prenda = detalle.getRegistroInventario().getPrenda();
+
+            // Calcular el precio unitario final
+            double precioUnitarioFinal = prenda.calcularPrecioUnitarioFinal(this.cliente);
+
+
+            totalVenta += precioUnitarioFinal * detalle.getCantidadComprada();
+        }
+
+        return totalVenta;
+    }
 }

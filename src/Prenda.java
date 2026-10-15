@@ -78,5 +78,24 @@ public class Prenda {
                 "PrecioBase: " + precioBase + " | "+
                 "Categoria Prenda: " + categoriaPrenda;
     }
-}
 
+    public boolean admitirTalla (Talla talla){
+        if (categoriaPrenda == CategoriaPrenda.CALZADO) {
+            return talla.esCalzado();
+        } else {
+            return !talla.esCalzado();
+        }
+    }
+
+    public double calcularPrecioUnitarioFinal(Cliente cliente) {
+        double precioConRecargo = precioBase + (precioBase * categoriaPrenda.getRecargo());
+
+        double descuento = cliente.getCategoriaCliente().getDescuento();
+
+        double precioFinal = precioConRecargo - (precioConRecargo * descuento);
+
+        return precioFinal;
+    }
+
+
+}

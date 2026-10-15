@@ -3,18 +3,38 @@ import java.util.List;
 
 public class RegistroInventario {
 
+    private Prenda prenda;
+    private Sucursal sucursal;
     private Talla talla;
     private String color;
     private int cantidad;
 
     private List <DetalleVenta> listaRegistroDetalles;
 
-    public RegistroInventario(Talla talla, String color, int cantidad) {
+    public RegistroInventario(Prenda prenda, Sucursal sucursal, Talla talla, String color, int cantidad) {
+        this.prenda = prenda;
+        this.sucursal = sucursal;
         this.talla = talla;
         this.color = color;
         this.cantidad = cantidad;
 
-        this.listaRegistroDetalles = new ArrayList<>();
+        listaRegistroDetalles = new ArrayList<>();
+    }
+
+    public Prenda getPrenda() {
+        return prenda;
+    }
+
+    public void setPrenda(Prenda prenda) {
+        this.prenda = prenda;
+    }
+
+    public Sucursal getSucursal() {
+        return sucursal;
+    }
+
+    public void setSucursal(Sucursal sucursal) {
+        this.sucursal = sucursal;
     }
 
     public Talla getTalla() {
@@ -51,10 +71,11 @@ public class RegistroInventario {
 
     @Override
     public String toString() {
-        return "RegistroInventario: " + " | "+
+        return "RegistroInventario: " +
+                "Prenda: " + prenda + " | "+
+                "Sucursal: " + sucursal + " | "+
                 "Talla: " + talla + " | " +
-                "Color: " + color +  " | "+
-                "Cantidad: " + cantidad;
+                "Color: " + color + " | " +
+                "Cantidad: " + cantidad + " | ";
     }
 }
-
